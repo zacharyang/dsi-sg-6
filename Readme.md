@@ -1,4 +1,4 @@
-#Zach's Repo for GA Data Science Immersive, 2018/2019#
+# Zach's Repo for GA Data Science Immersive, 2018-2019 #
 
 ## Introduction ## 
 
@@ -10,7 +10,7 @@ Here are some highlights of my work done through the course of work at General A
 
 ### GA Assignments & Projects ### 
 
-1. [Project 1 - Creating a Pokedex using Python](https://github.com/zacharyang/dsi-sg-6/blob/master/project-1-zach.ipynb)
+1. [Project 1 - Creating a Pokedex using Python](https://github.com/zacharyang/dsi-sg-6/blob/master/Project-1/project-1-zach.ipynb)
 
 2. Project 2 - Exploratory Data Analysis *(under construction)*
 
