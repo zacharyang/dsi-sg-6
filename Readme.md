@@ -20,7 +20,7 @@ Here are some highlights of my work done through the course at General Assembly.
 
 ### Capstone Project ### 
 
-*(under construction)*
+[Predicting iTunes movie listing prices](https://github.com/zacharyang/movies-project)
 
 ### Other projects ###
 
