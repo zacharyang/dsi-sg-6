@@ -14,14 +14,14 @@ Here are some highlights of my work done through the course at General Assembly.
 
 2. [Project 2 - Exploratory Data Analysis, Civic Data Analyses](https://github.com/zacharyang/dsi-sg-6/tree/master/Project-2/project-2-zach.ipynb)
 
-3. Project 3 - Regression and Classification with housing data *(under construction)*
+3. [Project 3 - Regression and Classification with housing data](https://github.com/zacharyang/dsi-sg-6/tree/master/Project-3/project-3-zach.ipynb)
 
 4. Project 4 - Web Scraping Job Posting *(under construction)*
 
 ### Capstone Project ### 
 
-[Predicting iTunes movie listing prices](https://github.com/zacharyang/movies-project)
+*(under construction)*
 
 ### Other projects ###
 
-*(under construction)*
+[Predicting iTunes movie listing prices](https://github.com/zacharyang/movies-project)
