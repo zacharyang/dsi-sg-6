@@ -7,9 +7,6 @@ import numpy as np
 import datetime
 import unicodedata
 import pandas as pd
-import psycopg2
-from sqlalchemy import create_engine
-from sqlalchemy.sql import text
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -19,18 +16,31 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 def get_jobs(urls):
+    '''Takes the job url and extracts and parses the information into a pandas Dataframe'''
 
+    # Initialise the data as a list, and each record to be a dictionary to be stored in the list #
     jobs=[]
-    driver=webdriver.Chrome()
+    
+    # Numerical features # 
     num_features=['salary_lower','salary_upper','num_apps']
+    # Title or short form text features # 
     title_features=['company_name','company_location','salary_type','job_title','employment_type','seniority']
+    # Long form text features # 
     text_features=['job_description','job_requirements']
+    # Date features # 
     date_features=['date_posted','date_expiry']
+    # All possible columns in the df # 
     job_features=num_features+title_features+text_features+date_features
+
+    # Date expression for parsing# 
     date_expression='(\d{2} (|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|) \d{4})'
+
+    # Initialise the webdriver # 
+    driver=webdriver.Chrome()
     for i,url in enumerate(urls):
+
         driver.get(url)
-        print(url)
+        # Wait till job info loads, if timeout, close the driver and try again #
         try:
             WebDriverWait(driver,10).until(lambda x: x.find_element_by_id('job_info'))
         except:
@@ -40,7 +50,10 @@ def get_jobs(urls):
             WebDriverWait(driver,20).until(lambda x: x.find_element_by_id('job_info'))
 
         html=driver.page_source
+        # Parse the data using Beautiful Soup # 
         soup=BeautifulSoup(html,'lxml')
+
+        # Progress marker on successful parsing # 
         print('{:2.2f}% complete'.format(i*100/len(urls)))
 
         ## Salary information ##
